@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header bg-dark">
+    <h3 class="card-title text-white">
+      <i class="fas fa-images"></i>
+      Upload an image
+    </h3>
+  </div>
+  <div class="card-body">
+
+    <form action="/images" method="POST" enctype="multipart/form-data"{{!-- Esto significa que se va a enviar un dato pesado --}}>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="custom-file">
+            <label for="formFileSm" class="form-label">Choose a file</label>
+            <input
+              class="form-control form-control"
+              id="inputGroup"
+              name="image"
+              type="file"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <input
+          type="text"
+          name="title"
+          class="form-control"
+          placeholder="Title for the image"
+          required
+        />
+      </div>
+      <div class="form-group mt-2">
+        <textarea
+          name="description"
+          rows="2"
+          class="form-control"
+          placeholder="Description for the image"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group mt-2">
+        <button class="btn btn-success">
+          <i class="fa fa-upload"></i>
+          Upload image
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
