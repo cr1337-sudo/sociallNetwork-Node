@@ -1,5 +1,8 @@
 const path = require("path")
 const fs = require("fs-extra")
+const Image = require("../models/Image")
+
+
 const index = (req, res) => {
    res.send("Image index page")
 };
@@ -14,6 +17,16 @@ const create = async (req, res) => {
 
    if (ext === ".png" || ext === ".jpg" || ext === ".jpeg" || ext === ".gif") {
       await fs.rename(imagePath, imageTargetPath)
+      const newImg= new Image({
+         title: req.body.title,
+         filename: file.filename,
+         description: req.body.description
+      })
+
+      const imageSaved = await newImg.save()
+   }else{
+      await fs.unlink(imagePath)
+      res.satus(500).json({error:"Only images are allowed"})
    }
 
    res.redirect("/")
