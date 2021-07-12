@@ -32,7 +32,7 @@ app.use(express.json());
 app.use("", indexRoutes)
 
 //Static Files
-app.use(express.static(path.join(__dirname, "./public")))
+app.use("/public", express.static(path.join(__dirname, "./public")))
 
 
 //Error handlers

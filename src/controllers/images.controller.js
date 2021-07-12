@@ -13,20 +13,20 @@ const create = async (req, res) => {
    const { file } = req;
    const ext = path.extname(file.originalname).toLowerCase()//Extrae la extension del nombre
    const imagePath = file.path;
-   const imageTargetPath = path.resolve(`src/public/upload/${file.filename}.${ext}`)
+   const imageTargetPath = path.resolve(`src/public/upload/${file.filename}${ext}`)
 
    if (ext === ".png" || ext === ".jpg" || ext === ".jpeg" || ext === ".gif") {
       await fs.rename(imagePath, imageTargetPath)
-      const newImg= new Image({
+      const newImg = new Image({
          title: req.body.title,
-         filename: file.filename,
+         filename: file.filename + ext,
          description: req.body.description
       })
 
       const imageSaved = await newImg.save()
-   }else{
+   } else {
       await fs.unlink(imagePath)
-      res.satus(500).json({error:"Only images are allowed"})
+      res.satus(500).json({ error: "Only images are allowed" })
    }
    res.redirect("/")
 };
