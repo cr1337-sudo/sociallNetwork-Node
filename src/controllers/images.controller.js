@@ -15,7 +15,6 @@ const create = async (req, res) => {
    if (ext === ".png" || ext === ".jpg" || ext === ".jpeg" || ext === ".gif") {
       await fs.rename(imagePath, imageTargetPath)
    }
-
    res.redirect("/")
 };
 
