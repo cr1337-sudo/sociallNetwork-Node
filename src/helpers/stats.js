@@ -7,7 +7,7 @@ const imagesCounter = async () => {
 }
 
 const commentsCounter = async () => {
-   return await Comment.countDocuments()
+   return await Comment.countDocuments() 
 }
 
 const imagesTotalViews = async () => {

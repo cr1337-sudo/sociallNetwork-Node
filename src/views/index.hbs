@@ -56,6 +56,8 @@
    <div class="card-body">
       <div class="row">
 
+
+{{#if images}}
 {{#each images}}
    <div class="col-md-4">
       <a href="/images/{{filename}}">
@@ -63,6 +65,7 @@
       </a>
    </div>
 {{/each}}
+{{/if}}
    </div>
 </div>
 
