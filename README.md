@@ -49,6 +49,7 @@
     Carpeta con los usuarios estáticos, js, css y la carpeta upload donde se suben todas las imágenes.
     
 🟡 Config 🟡
+
     🟣 Helpers 🟣
         Acá se almacena el helper de hbs utilizado para mostrar el tiempo de publicado de una imagen en ese formato.
 
