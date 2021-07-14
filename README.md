@@ -1,4 +1,10 @@
+TECNOLOGÍAS:
+
+HTML/BOOTSTRAP/JAVASCRIPT/JQUERY/NODE.JS/EXPRESS
+
+
 PRUEBA:
+
 
 🔴🔴🔴  https://social-web-cr1337.herokuapp.com 🔴🔴🔴
 
