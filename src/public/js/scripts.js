@@ -1,3 +1,6 @@
+alert("Por favor no subas imagenes con mucha calidad, debido a que uso una base de datos gratis la velocidad de subida y bajada es limitada, y con imagenes muy pesadas se daña todo :(")
+
+
 /* Like */
 $('#btn-like').click(function (e) {
    e.preventDefault();
